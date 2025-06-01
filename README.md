@@ -99,4 +99,4 @@ git commit -m "İlk yükleme"
 - **Resim yükleyemiyorum:** Django'da `MEDIA_URL` ve `MEDIA_ROOT` ayarlarını ve url yönlendirmesini kontrol et.
 
 ## Lisans
-MIT 
+MIT # SecHand02
