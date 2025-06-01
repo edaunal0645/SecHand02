@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Products - Wardrobe Revive</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../styles.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar bg-dark navbar-dark">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1">Admin Dashboard</span>
+      <ul class="navbar-nav flex-row">
+        <li class="nav-item mx-2"><a class="nav-link" href="index.html">Dashboard</a></li>
+        <li class="nav-item mx-2"><a class="nav-link active" href="products.html">Products</a></li>
+        <li class="nav-item mx-2"><a class="nav-link" href="members.html">Members</a></li>
+        <li class="nav-item mx-2"><a class="nav-link" href="sold.html">Sold Items</a></li>
+        <li class="nav-item mx-2"><a class="nav-link" href="visitors.html">Visitor Stats</a></li>
+      </ul>
+    </div>
+  </nav>
+  <main class="container py-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h1>Products</h1>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal">Add Product</button>
+    </div>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Category</th>
+          <th>Image</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Vintage Floral Dress</td>
+          <td>$35</td>
+          <td>Women</td>
+          <td><img src="../images/wj-dress.jpg" alt="Dress" width="50"></td>
+          <td>
+            <button class="btn btn-sm btn-warning">Edit</button>
+            <button class="btn btn-sm btn-danger">Delete</button>
+          </td>
+        </tr>
+        <tr>
+          <td>Vintage Denim Jacket</td>
+          <td>$45</td>
+          <td>Men</td>
+          <td><img src="../images/wj-mens-jacket.jpg" alt="Jacket" width="50"></td>
+          <td>
+            <button class="btn btn-sm btn-warning">Edit</button>
+            <button class="btn btn-sm btn-danger">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- Modal -->
+    <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="productModalLabel">Add/Edit Product</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label class="form-label">Product Name</label>
+                <input type="text" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Price</label>
+                <input type="number" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Category</label>
+                <select class="form-select" required>
+                  <option>Women</option>
+                  <option>Men</option>
+                  <option>Household</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Image</label>
+                <input type="file" class="form-control">
+              </div>
+              <button type="submit" class="btn btn-primary">Save</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2024 Wardrobe Revive Admin. All rights reserved.</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 
